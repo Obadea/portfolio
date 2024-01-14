@@ -38,10 +38,12 @@ const useThemeSwitcher = () => {
   useEffect(() => {
     if (mode === "dark") {
       window.localStorage.setItem("theme", "dark");
-      // document.documentElement.classList.add("dark");
-    } else {
+      document.documentElement.classList.add("dark");
+    }
+
+    if (mode === "light") {
       window.localStorage.setItem("theme", "light");
-      // document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove("dark");
     }
   }, [mode]);
 
