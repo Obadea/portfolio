@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { theme } from "../../../tailwind.config";
 
 const useThemeSwitcher = () => {
-  const preferDarkQuery = "(prefer-color-scheme: dark)";
+  const preferDarkQuery = "(prefer-color-scheme:dark)";
   const [mode, setMode] = useState("");
 
   useEffect(() => {
@@ -21,7 +20,6 @@ const useThemeSwitcher = () => {
       } else {
         let check = mediaQuery.matches ? "dark" : "light";
         setMode(check);
-
         if (check === "dark") {
           document.documentElement.classList.add("dark");
         } else {
@@ -30,20 +28,24 @@ const useThemeSwitcher = () => {
       }
     };
 
+    handleChange();
+
     mediaQuery.addEventListener("change", handleChange);
+
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
   useEffect(() => {
     if (mode === "dark") {
       window.localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
+      // document.documentElement.classList.add("dark");
     } else {
       window.localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("dark");
+      // document.documentElement.classList.remove("dark");
     }
   }, [mode]);
 
   return [mode, setMode];
 };
+
 export default useThemeSwitcher;
