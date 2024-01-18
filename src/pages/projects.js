@@ -4,14 +4,17 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import project1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
+import React, { useEffect, useState } from "react";
+import project1 from "../../public/images/projects/carHub.jpeg";
+import project2 from "../../public/images/projects/Clipboard.jpeg";
+
 import { motion } from "framer-motion";
 const FramerImage = motion(Image);
+import { items } from "../components/data";
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="w-full flex items-center rounded-br-2xl justify-between rounded-3xl bg-light shadow-2xl p-12 dark:bg-dark dark:shadow-3xl">
+    <article className="w-full flex items-center rounded-br-2xl justify-between rounded-3xl bg-light shadow-2xl p-12 dark:bg-dark dark:shadow-3xl col-span-12">
       <Link
         href={link}
         target="_blank"
@@ -66,7 +69,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ title, type, img, link, github }) => {
   return (
-    <article className="w-full display flex flex-col items-center justify-center rounded-2xl shadow-2xl bg-light p-6 dark:bg-dark dark:border-light">
+    <article className="w-full display flex flex-col items-center justify-center rounded-2xl shadow-2xl bg-light p-6 dark:bg-dark dark:border-light col-span-6">
       <Link
         href={link}
         target="_blank"
@@ -113,6 +116,36 @@ const Project = ({ title, type, img, link, github }) => {
 };
 
 const projects = () => {
+  const [selectedFilters, setSelectedFilters] = useState([]);
+  const [filteredItems, setFilteredItems] = useState(items);
+
+  let filters = ["Latest", "UI/UX Focus", "React", "JavaScript", "Nextjs"];
+
+  const handleFilterButtonClick = (selectedCategory) => {
+    if (selectedFilters.includes(selectedCategory)) {
+      let filters = selectedFilters.filter((el) => el !== selectedCategory);
+      setSelectedFilters(filters);
+    } else {
+      setSelectedFilters([...selectedFilters, selectedCategory]);
+    }
+  };
+
+  useEffect(() => {
+    filterItems();
+  }, [selectedFilters]);
+
+  const filterItems = () => {
+    if (selectedFilters.length > 0) {
+      let tempItems = selectedFilters.map((selectedCategory) => {
+        let temp = items.filter((item) => item.category === selectedCategory);
+        return temp;
+      });
+      setFilteredItems(tempItems.flat());
+    } else {
+      setFilteredItems([...items]);
+    }
+  };
+
   return (
     <>
       <Head>
@@ -126,45 +159,55 @@ const projects = () => {
             className="mb-16"
           />
 
+          <div className=" flex justify-end mb-10 ">
+            {filters.map((category, idx) => (
+              <button
+                onClick={() => handleFilterButtonClick(category)}
+                className={`filter__button ${
+                  selectedFilters?.includes(category)
+                    ? "bg-dark text-light dark:bg-light dark:text-dark "
+                    : ""
+                }`}
+                key={`filters-${idx}`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
           <div className="grid grid-cols-12 gap-24 gap-y-32">
             <div className="col-span-12">
               <FeaturedProject
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
-                link="/"
+                title="Car ShowCase Application"
+                summary="The Car Search Web App (CarHub) is a dynamic and user-friendly application that simplifies the process of finding detailed information about cars, including their model, year of manufacture, fuel type, and daily rental prices. This app caters to users who are looking for specific details about cars for potential rental."
+                link="https://obadea-cars-showcase.vercel.app/"
                 img={project1}
                 type="Featured Project"
-                github="/"
+                github="https://github.com/Obadea/obadea_cars_showcase"
               />
             </div>
 
-            <div className="col-span-6">
+            {filteredItems.map((item, idx) => (
               <Project
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-               It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-               local currency."
-                link="/"
-                img={project1}
-                type="Featured Project"
-                github="/"
+                key={`items-${idx}`}
+                title={item.title}
+                link={`${item.link}`}
+                img={item.img}
+                type={`${item.type}`}
+                github={`${item.github}`}
               />
-            </div>
+            ))}
 
-            <div className="col-span-6">
-              <Project
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
+            {/* <Project
+              title="Crypto Screener Application"
+              summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
                local currency."
-                link="/"
-                img={project1}
-                type="Featured Project"
-                github="/"
-              />
-            </div>
+              link="/"
+              img={project1}
+              type="Featured Project"
+              github="/"
+            /> */}
 
             <div className="col-span-12">
               <FeaturedProject
@@ -172,34 +215,6 @@ const projects = () => {
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
                 It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
                 local currency."
-                link="/"
-                img={project1}
-                type="Featured Project"
-                github="/"
-              />
-            </div>
-
-            <div className="col-span-6">
-              {" "}
-              <Project
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-               It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-               local currency."
-                link="/"
-                img={project1}
-                type="Featured Project"
-                github="/"
-              />
-            </div>
-
-            <div className="col-span-6">
-              {" "}
-              <Project
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-               It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-               local currency."
                 link="/"
                 img={project1}
                 type="Featured Project"

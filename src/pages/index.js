@@ -35,9 +35,9 @@ export default function Home() {
             <div className="w-1/2 flex flex-col items-center self-center">
               <AnimatedText
                 text="Turning Vision Into Reality With Code And Design."
-                className="!text-6xl !text-left"
+                className="!text-6xl !text-left cursor-default"
               />
-              <p className="my-4 text-base font-medium">
+              <p className="my-4 text-base font-medium cursor-default">
                 As a proficient front-end developer, I specialize in creating
                 sleek and user-friendly interfaces. Check out my latest React.js
                 projects and articles to see my expertise in action. I'm
