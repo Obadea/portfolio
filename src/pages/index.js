@@ -1,12 +1,13 @@
-import Layout from "@/components/Layout";
-import Head from "next/head";
-import Image from "next/image";
-import profilePic from "../../public/images/profile/developer-pic-1.png";
-import AnimatedText from "@/components/AnimatedText";
-import Link from "next/link";
-import { LinkArrow } from "@/components/Icons";
-import HireMe from "@/components/HireMe";
-import lightBlub from "../../public/images/svgs/miscellaneous_icons_1.svg";
+import Layout from '@/components/Layout';
+import Head from 'next/head';
+import Image from 'next/image';
+import profilePic from '../../public/images/profile/developer-pic-1.png';
+import AnimatedText from '@/components/AnimatedText';
+import Link from 'next/link';
+import { LinkArrow } from '@/components/Icons';
+import HireMe from '@/components/HireMe';
+import lightBlub from '../../public/images/svgs/miscellaneous_icons_1.svg';
+import { Container } from 'postcss';
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
       </Head>
       <main
         className="flex items-center text-dark w-full min-h-scree 
-      dark:text-light"
+      dark:text-light "
       >
         <Layout className="pt-0">
           <div className="flex items-center justify-between w-full">
