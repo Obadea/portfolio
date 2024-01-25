@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
-import { motion, useScroll } from "framer-motion";
-import LiIcon from "./LiIcon";
+import React, { useRef } from 'react';
+import { motion, useScroll } from 'framer-motion';
+import LiIcon from './LiIcon';
 
 const Details = ({ type, time, place, info }) => {
   const ref = useRef(null);
@@ -13,7 +13,7 @@ const Details = ({ type, time, place, info }) => {
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
-        transition={{ duration: 0.8, type: "spring" }}
+        transition={{ duration: 0.8, type: 'spring' }}
       >
         <h3 className="capitalize font-bold text-2xl">{type} </h3>
 
@@ -30,19 +30,21 @@ const Education = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"],
+    offset: ['start end', 'end start'],
   });
   return (
     <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center">Education</h2>
+      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:md-16 ">
+        Education
+      </h2>
 
-      <div ref={ref} className="w-[75%] mx-auto relative">
+      <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light"
+          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]"
         />
 
-        <ul className="w-full flex flex-col items-start justify-between ml-4">
+        <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
             type="Online Coursework"
             time="2021-Present"
