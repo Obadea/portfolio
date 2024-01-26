@@ -11,6 +11,7 @@ import project2 from '../../public/images/projects/Clipboard.jpeg';
 import { motion } from 'framer-motion';
 const FramerImage = motion(Image);
 import { items } from '../components/data';
+import TransitionEffect from '@/components/TransitionEffect';
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
@@ -46,7 +47,9 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
             {title}
           </h2>
         </Link>
-        <p className="my-2 font-medium text-dark dark:text-light">{summary}</p>
+        <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">
+          {summary}
+        </p>
         <div className="mt-2 flex items-center">
           <Link href={github} target="_blank" className="w-10">
             <GithubIcon />
@@ -69,7 +72,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ title, type, img, link, github }) => {
   return (
-    <article className="w-full display flex flex-col items-center justify-center rounded-2xl shadow-2xl bg-light p-6 dark:bg-dark dark:border-light col-span-6">
+    <article className="w-full display flex flex-col items-center justify-center rounded-2xl shadow-2xl bg-light p-6 dark:bg-dark dark:border-light col-span-6 xs:p-4 sm:col-span-12">
       <Link
         href={link}
         target="_blank"
@@ -85,7 +88,7 @@ const Project = ({ title, type, img, link, github }) => {
       </Link>
 
       <div className="w-full flex flex-col items-start justify-between m-4">
-        <span className="text-primary font-medium text-xl dark:text-primaryDark">
+        <span className="text-primary font-medium text-xl dark:text-primaryDark truncate w-full lg:text-lg md:text-base">
           {type}
         </span>
         <Link
@@ -93,7 +96,7 @@ const Project = ({ title, type, img, link, github }) => {
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2m w-full text-left text-2xl font-bold ">
+          <h2 className="my-2m w-full text-left text-2xl font-bold lg:text-2xl">
             {title}
           </h2>
         </Link>
@@ -102,11 +105,11 @@ const Project = ({ title, type, img, link, github }) => {
           <Link
             href={link}
             target="_blank"
-            className=" text-lg font-semibold underline"
+            className=" text-lg font-semibold underline md:text-base"
           >
             Visit
           </Link>
-          <Link href={github} target="_blank" className="w-8">
+          <Link href={github} target="_blank" className="w-8 md:w-6">
             <GithubIcon />
           </Link>
         </div>
@@ -150,8 +153,10 @@ const projects = () => {
     <>
       <Head>
         <title>Obadea | Projects Page</title>
-        <meta name="description" content="Obadiah's Project" />
+        <meta name="description" content="Obadiah Projects" />
       </Head>
+      <TransitionEffect />
+
       <main className="w-full mb-16 flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
