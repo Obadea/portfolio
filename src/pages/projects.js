@@ -1,24 +1,24 @@
-import AnimatedText from "@/components/AnimatedText";
-import { GithubIcon } from "@/components/Icons";
-import Layout from "@/components/Layout";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import project1 from "../../public/images/projects/carHub.jpeg";
-import project2 from "../../public/images/projects/Clipboard.jpeg";
+import AnimatedText from '@/components/AnimatedText';
+import { GithubIcon } from '@/components/Icons';
+import Layout from '@/components/Layout';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import project1 from '../../public/images/projects/carHub.jpeg';
+import project2 from '../../public/images/projects/Clipboard.jpeg';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 const FramerImage = motion(Image);
-import { items } from "../components/data";
+import { items } from '../components/data';
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="w-full flex items-center rounded-br-2xl justify-between rounded-3xl bg-light shadow-2xl p-12 dark:bg-dark dark:shadow-3xl col-span-12">
+    <article className="w-full flex items-center rounded-br-2xl justify-between rounded-3xl bg-light shadow-2xl p-12 dark:bg-dark dark:shadow-3xl lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
       <Link
         href={link}
         target="_blank"
-        className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
+        className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
       >
         <FramerImage
           src={img}
@@ -33,22 +33,20 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         />
       </Link>
 
-      <div className="w-1/2 flex flex-col items-start justify-between pl-6">
-        <span className="text-primary font-medium text-xl dark:text-primaryDark">
+      <div className="w-1/2 flex flex-col items-start justify-between pl-6  lg:w-full lg:pl-0 lg:pt-6">
+        <span className="text-primary font-medium text-xl dark:text-primaryDark xs:text-base">
           {type}
         </span>
-
         <Link
           href={link}
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-3xl font-bold dark:text-light">
+          <h2 className="my-2 w-full text-left text-3xl font-bold dark:text-light sm:text-sm">
             {title}
           </h2>
         </Link>
         <p className="my-2 font-medium text-dark dark:text-light">{summary}</p>
-
         <div className="mt-2 flex items-center">
           <Link href={github} target="_blank" className="w-10">
             <GithubIcon />
@@ -57,7 +55,9 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark"
+            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark sm:px-4 sm:text-base
+
+            "
           >
             Visit Project
           </Link>
@@ -119,7 +119,7 @@ const projects = () => {
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [filteredItems, setFilteredItems] = useState(items);
 
-  let filters = ["Latest", "UI/UX Focus", "React", "JavaScript", "Nextjs"];
+  let filters = ['Latest', 'UI/UX Focus', 'React', 'JavaScript', 'Nextjs'];
 
   const handleFilterButtonClick = (selectedCategory) => {
     if (selectedFilters.includes(selectedCategory)) {
@@ -156,17 +156,17 @@ const projects = () => {
         <Layout className="pt-16">
           <AnimatedText
             text="Imagination Trumps Knowledge!"
-            className="mb-16"
+            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
 
-          <div className=" flex justify-end mb-10 ">
+          <div className=" flex justify-end mb-10 mt-4 sm:justify-center sm:text-[0.8rem] xs:grid xs:grid-cols-3 xs:text-[0.5rem]">
             {filters.map((category, idx) => (
               <button
                 onClick={() => handleFilterButtonClick(category)}
                 className={`filter__button ${
                   selectedFilters?.includes(category)
-                    ? "bg-dark text-light dark:bg-light dark:text-dark "
-                    : ""
+                    ? 'bg-dark text-light dark:bg-light dark:text-dark '
+                    : ''
                 }`}
                 key={`filters-${idx}`}
               >
@@ -175,7 +175,7 @@ const projects = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-12 gap-24 gap-y-32">
+          <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
                 title="Car ShowCase Application"
