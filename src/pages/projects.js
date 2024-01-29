@@ -132,10 +132,6 @@ const Projects = () => {
     }
   };
 
-  useEffect(() => {
-    filterItems();
-  }, [selectedFilters]);
-
   const filterItems = () => {
     if (selectedFilters.length > 0) {
       let tempItems = selectedFilters.map((selectedCategory) => {
@@ -147,6 +143,10 @@ const Projects = () => {
       setFilteredItems([...items]);
     }
   };
+
+  useEffect(() => {
+    filterItems();
+  }, [selectedFilters]);
 
   return (
     <>
