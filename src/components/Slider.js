@@ -156,7 +156,7 @@ export default function App() {
           <FeaturedProject
             title="Obadiah's Portfolio"
             summary="This portfolio showcases my diverse skill set, featuring a collection of projects that demonstrate my proficiency in web development and other technologies. Explore my work, learn about my skills, read articles and get to know me better through the provided contact details. I look forward to connecting with you and discussing potential collaborations or opportunities. Thank you for visiting!"
-            link="https://portfolio-git-master-obadeas-projects.vercel.app/"
+            link="https://portfolio-obadeas-projects.vercel.app/"
             img={project6}
             type="Featured Project"
             github="https://github.com/Obadea/portfolio"
