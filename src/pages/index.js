@@ -7,7 +7,6 @@ import Link from 'next/link';
 import { LinkArrow } from '@/components/Icons';
 import HireMe from '@/components/HireMe';
 import lightBlub from '../../public/images/svgs/miscellaneous_icons_1.svg';
-import { Container } from 'postcss';
 import TransitionEffect from '@/components/TransitionEffect';
 
 export default function Home() {
@@ -44,11 +43,10 @@ export default function Home() {
                 "
               />
               <p className="my-4 text-base font-medium cursor-default md:text-sm sm:text-xs">
-                As a proficient front-end developer, I specialize in creating
-                sleek and user-friendly interfaces. Check out my latest React.js
-                projects and articles to see my expertise in action. I'm
-                passionate about bringing ideas to life through innovative web
-                development.
+                A passionate developer who possesses a unique blend of
+                creativity, technical expertise, and a strong passion for
+                building visually appealing, user-friendly interfaces and
+                cutting-edge web applications.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link

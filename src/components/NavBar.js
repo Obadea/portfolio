@@ -125,7 +125,7 @@ const NavBar = () => {
             <GithubIcon />
           </motion.a>
           <motion.a
-            href="www.linkedin.com/in/obadea"
+            href="https://www.linkedin.com/in/obadea/"
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -134,7 +134,7 @@ const NavBar = () => {
             <LinkedInIcon />
           </motion.a>
           <motion.a
-            href="/"
+            href="https://pin.it/f3FJ8uQtC"
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -142,7 +142,8 @@ const NavBar = () => {
           >
             <PinterestIcon />
           </motion.a>
-          <motion.a
+          {/* Coming Soon */}
+          {/* <motion.a
             href="/"
             target="_blank"
             whileHover={{ y: -2 }}
@@ -150,7 +151,7 @@ const NavBar = () => {
             className="w-6 ml-3   "
           >
             <DribbbleIcon />
-          </motion.a>
+          </motion.a> */}
 
           <button
             onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
@@ -219,7 +220,7 @@ const NavBar = () => {
               <GithubIcon />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/obadea"
+              href="https://www.linkedin.com/in/obadea/"
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}

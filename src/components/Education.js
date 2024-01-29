@@ -20,7 +20,7 @@ const Details = ({ type, time, place, info }) => {
         </h3>
 
         <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
-          {time} | {place}
+          {place}
         </span>
         <p className="font-medium w-full md:text-sm">{info}</p>
       </motion.div>
@@ -50,7 +50,7 @@ const Education = () => {
           <Details
             type="Online Coursework"
             time="2021-Present"
-            place="Udemy,Coursera,Sololearn"
+            place="Udemy, Coursera, Sololearn"
             info="Completed coursework in advanced topics such as Frontend Development, Responsive Design, and User Interface (UI) Engineering. Acquired skills in creating visually appealing and interactive web interfaces, ensuring a seamless user experience across various devices."
           />
 

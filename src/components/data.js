@@ -93,12 +93,4 @@ export const items = [
     type: 'API Integration',
     img: project11,
   },
-  {
-    title: 'MovieLand',
-    category: 'React',
-    link: 'https://little-movie-app-project.pages.dev/',
-    github: 'https://github.com/Obadea/little-movie-app-project',
-    type: 'API Integration',
-    img: project12,
-  },
 ];

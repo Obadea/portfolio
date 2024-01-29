@@ -194,30 +194,6 @@ const projects = () => {
                 github={`${item.github}`}
               />
             ))}
-
-            {/* <Project
-              title="Crypto Screener Application"
-              summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-               It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-               local currency."
-              link="/"
-              img={project1}
-              type="Featured Project"
-              github="/"
-            /> */}
-
-            {/* <div className="col-span-12">
-              <FeaturedProject
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
-                link="/"
-                img={project1}
-                type="Featured Project"
-                github="/"
-              />
-            </div> */}
           </div>
         </Layout>
       </main>

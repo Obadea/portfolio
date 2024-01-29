@@ -115,6 +115,7 @@ export default function App() {
         autoplay={true}
         className="mySwiper swiper"
       >
+        {/* Featured Project 1 */}
         <SwiperSlide className="swiper-slide">
           <FeaturedProject
             title="Car ShowCase Application"
@@ -125,6 +126,8 @@ export default function App() {
             github="https://github.com/Obadea/obadea_cars_showcase"
           />
         </SwiperSlide>
+
+        {/* Featured Project 2 */}
         <SwiperSlide className="swiper-slide">
           <FeaturedProject
             title="GPT-3"
@@ -135,6 +138,8 @@ export default function App() {
             github="https://github.com/Obadea/GPT-3"
           />
         </SwiperSlide>
+
+        {/* Featured Project 3 */}
         <SwiperSlide className="swiper-slide">
           <FeaturedProject
             title="MetaVerse"
@@ -145,16 +150,20 @@ export default function App() {
             github="https://github.com/Obadea/metaVerse"
           />
         </SwiperSlide>
+
+        {/* Featured Project 4 */}
         <SwiperSlide className="swiper-slide">
           <FeaturedProject
             title="Obadiah's Portfolio"
-            summary="The Car Search Web App (CarHub) is a dynamic and user-friendly application that simplifies the process of finding detailed information about cars, including their model, year of manufacture, fuel type, and daily rental prices. This app caters to users who are looking for specific details about cars for potential rental."
+            summary="This portfolio showcases my diverse skill set, featuring a collection of projects that demonstrate my proficiency in web development and other technologies. Explore my work, learn about my skills, read articles and get to know me better through the provided contact details. I look forward to connecting with you and discussing potential collaborations or opportunities. Thank you for visiting!"
             link="/"
             img={project6}
             type="Featured Project"
             github="https://github.com/Obadea/portfolio"
           />
         </SwiperSlide>
+
+        {/* Featured Project 5 */}
         <SwiperSlide className="swiper-slide">
           <FeaturedProject
             title="Promptopia"
