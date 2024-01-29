@@ -160,7 +160,7 @@ const NavBar = () => {
           `}
           >
             {mode === 'dark' ? (
-              <SunIcon className={'fill-dark'} />
+              <SunIcon className={'w-24 h-24 fill-dark'} />
             ) : (
               <MoonIcon className={'fill-dark'} />
             )}
@@ -255,7 +255,7 @@ const NavBar = () => {
     `}
             >
               {mode === 'dark' ? (
-                <SunIcon className={'fill-dark'} />
+                <SunIcon className={' w-24 h-24 fill-dark'} />
               ) : (
                 <MoonIcon className={'fill-dark'} />
               )}
