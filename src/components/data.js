@@ -8,6 +8,8 @@ import project7 from '../../public/images/projects/forkify.jpeg';
 import project8 from '../../public/images/projects/metaVerse.jpeg';
 import project9 from '../../public/images/projects/bankist website.jpeg';
 import project10 from '../../public/images/projects/mapty.jpeg';
+import project11 from '../../public/images/projects/aiSummarizer.jpeg';
+import project12 from '../../public/images/projects/movieland.jpeg';
 
 export const items = [
   {
@@ -61,7 +63,7 @@ export const items = [
 
   {
     title: 'Promptopia',
-    category: 'React',
+    category: 'NextJs',
     link: 'https://promptopia-obadea.vercel.app/',
     github: 'https://github.com/Obadea/promptopia',
     type: 'API Integration',
@@ -82,5 +84,21 @@ export const items = [
     github: 'https://github.com/Obadea/Mapty',
     type: 'API Integration',
     img: project10,
+  },
+  {
+    title: 'Ai Summarizer',
+    category: 'React',
+    link: 'https://obadea-ai-summarizer.pages.dev/',
+    github: 'https://github.com/Obadea/Ai-summarizer',
+    type: 'API Integration',
+    img: project11,
+  },
+  {
+    title: 'MovieLand',
+    category: 'React',
+    link: 'https://little-movie-app-project.pages.dev/',
+    github: 'https://github.com/Obadea/little-movie-app-project',
+    type: 'API Integration',
+    img: project12,
   },
 ];

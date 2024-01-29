@@ -5,13 +5,12 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import project1 from '../../public/images/projects/carHub.jpeg';
-import project2 from '../../public/images/projects/Clipboard.jpeg';
 
 import { motion } from 'framer-motion';
 const FramerImage = motion(Image);
 import { items } from '../components/data';
 import TransitionEffect from '@/components/TransitionEffect';
+import Slider from '@/components/Slider';
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
@@ -72,7 +71,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ title, type, img, link, github }) => {
   return (
-    <article className="w-full display flex flex-col items-center justify-center rounded-2xl shadow-2xl bg-light p-6 dark:bg-dark dark:border-light col-span-6 xs:p-4 sm:col-span-12">
+    <article className="w-full display flex flex-col items-center justify-center rounded-2xl shadow-2xl bg-light p-6 dark:bg-dark dark:border-light col-span-6 xs:p-4 sm:col-span-12 ">
       <Link
         href={link}
         target="_blank"
@@ -157,7 +156,7 @@ const projects = () => {
       </Head>
       <TransitionEffect />
 
-      <main className="w-full mb-16 flex-col items-center justify-center dark:text-light">
+      <main className="w-full mb-16 flex-col items-center justify-center dark:text-light overflow-x-hidden">
         <Layout className="pt-16">
           <AnimatedText
             text="Imagination Trumps Knowledge!"
@@ -181,15 +180,8 @@ const projects = () => {
           </div>
 
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
-            <div className="col-span-12">
-              <FeaturedProject
-                title="Car ShowCase Application"
-                summary="The Car Search Web App (CarHub) is a dynamic and user-friendly application that simplifies the process of finding detailed information about cars, including their model, year of manufacture, fuel type, and daily rental prices. This app caters to users who are looking for specific details about cars for potential rental."
-                link="https://obadea-cars-showcase.vercel.app/"
-                img={project1}
-                type="Featured Project"
-                github="https://github.com/Obadea/obadea_cars_showcase"
-              />
+            <div className="col-span-12 z-10">
+              <Slider className="z-100" />
             </div>
 
             {filteredItems.map((item, idx) => (
@@ -214,7 +206,7 @@ const projects = () => {
               github="/"
             /> */}
 
-            <div className="col-span-12">
+            {/* <div className="col-span-12">
               <FeaturedProject
                 title="Crypto Screener Application"
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
@@ -225,7 +217,7 @@ const projects = () => {
                 type="Featured Project"
                 github="/"
               />
-            </div>
+            </div> */}
           </div>
         </Layout>
       </main>

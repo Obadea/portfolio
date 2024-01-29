@@ -74,7 +74,7 @@ const NavBar = () => {
   };
 
   return (
-    <header className="w-full mb-4 px-32 py-8 font-medium  items-center justify-between dark:text-lightm flex  relative z-10 lg:px-16 md:px-12 sm:px-8  lg:flex-row-reverse dark:text-light text-dark">
+    <header className="w-full mb-4 px-32 py-8 font-medium  items-center justify-between dark:text-lightm flex  relative z-20 lg:px-16 md:px-12 sm:px-8  lg:flex-row-reverse dark:text-light text-dark">
       <button
         className=" flex-col justify-center items-center p-1.5 hidden lg:flex "
         onClick={handleClick}
@@ -96,7 +96,7 @@ const NavBar = () => {
         ></span>
       </button>
 
-      <Logo display={'2xl:hidden lg:flex'} />
+      <Logo display={'lg:flex 2xl:hidden fullxl:hidden'} />
 
       <div className="w-full flex justify-between items-center lg:hidden">
         <nav>
@@ -171,7 +171,7 @@ const NavBar = () => {
         <motion.div
           initial={{ scale: 0, opacity: 0, x: '-50% ', y: '-50%' }}
           animate={{ scale: 1, opacity: 1 }}
-          className="min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2  z-30 -translate-y-1/2 bg-dark/90 dark:bg-light/60 rounded-lg  py-32  backdrop-blur-md "
+          className="min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 z-50 -translate-y-1/2 bg-dark/90 dark:bg-light/60 rounded-lg  py-32  backdrop-blur-md "
         >
           <nav className="flex items-center justify-center flex-col">
             <CustomMobileLink
@@ -219,7 +219,7 @@ const NavBar = () => {
               <GithubIcon />
             </motion.a>
             <motion.a
-              href="www.linkedin.com/in/obadea"
+              href="https://linkedin.com/in/obadea"
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -228,7 +228,7 @@ const NavBar = () => {
               <LinkedInIcon />
             </motion.a>
             <motion.a
-              href="/"
+              href="https://pin.it/f3FJ8uQtC"
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -236,7 +236,8 @@ const NavBar = () => {
             >
               <PinterestIcon />
             </motion.a>
-            <motion.a
+            {/* Dribble Coming soon */}
+            {/* <motion.a
               href="/"
               target="_blank"
               whileHover={{ y: -2 }}
@@ -244,7 +245,7 @@ const NavBar = () => {
               className="w-6 ml-3 sm:mx-1 "
             >
               <DribbbleIcon />
-            </motion.a>
+            </motion.a> */}
 
             <button
               onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
@@ -263,7 +264,7 @@ const NavBar = () => {
       ) : null}
 
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
-        <Logo display={'lg:hidden'} />
+        <Logo display={'lg:hidden 2xl:flex fullxl:flex'} />
       </div>
     </header>
   );

@@ -6,14 +6,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion, useMotionValue } from 'framer-motion';
 
-import article1 from '../../public/images/articles/pagination component in reactjs.jpg';
-import article2 from '../../public/images/articles/create loading screen in react js.jpg';
-import article3 from '../../public/images/articles/create modal component in react using react portals.png';
-import article4 from '../../public/images/articles/form validation in reactjs using custom react hook.png';
-import article5 from '../../public/images/articles/smooth scrolling in reactjs.png';
-import article6 from '../../public/images/articles/todo list app built using react redux and framer motion.png';
-import article7 from '../../public/images/articles/What is higher order component in React.jpg';
-import article8 from '../../public/images/articles/What is Redux with easy explanation.png';
+import article1 from '../../public/images/articles/flexbox.png';
+import article2 from '../../public/images/articles/poster-app-design-case-study-tubik.jpg';
+import article3 from '../../public/images/articles/frontendTools.png';
+import article4 from '../../public/images/articles/typography.png';
+import article5 from '../../public/images/articles/snippets.jpg';
+import article6 from '../../public/images/articles/optimization.jpeg';
+import article7 from '../../public/images/articles/javaScriptreference.jpg';
+import article8 from '../../public/images/articles/JavaScript-DOM-Tips-and-Tricks.png';
 import TransitionEffect from '@/components/TransitionEffect';
 
 const FramerImage = motion(Image);
@@ -128,22 +128,18 @@ const articles = () => {
           />
           <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16 ">
             <FeaturedArticle
-              title="Build A Custom Pagination Component In Reactjs From Scratch"
-              summary="Build A Custom Pagination Component In Reactjs From Scratch
-            Learn how to build a custom pagination component in ReactJS from scratch. 
-            Follow this step-by-step guide to integrate Pagination component in your ReactJS project."
-              time="9 min read"
-              link="/"
+              title="An Interactive Guide to Flexbox"
+              summary="When we truly learn the secrets of the Flexbox layout mode, we can build absolutely incredible things. Fluid layouts that stretch and shrink without arbitrary breakpoints. In this action-packed…"
+              link="https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/?ref=refind"
+              time="1 hr read"
               img={article1}
             />
 
             <FeaturedArticle
-              title="Creating Stunning Loading Screens In React: Build 3 Types Of Loading Screens"
-              summary="Learn how to create stunning loading screens in React with 3 different methods. 
-              Discover how to use React-Loading, React-Lottie & build a custom loading screen. 
-              Improve the user experience."
-              time="10 min read"
-              link="/"
+              title="10 UI Design Trends We Start 2024 With"
+              summary="Check a brief review of some hot UI design trends for web and mobile, packed with a massive bunch of UI/UX design examples by the tubik team."
+              time="1+ hr read"
+              link="https://blog.tubikstudio.com/ui-design-trends-2024/"
               img={article2}
             />
           </ul>
@@ -152,45 +148,46 @@ const articles = () => {
           </h2>
           <ul>
             <Article
-              title="Creating An Efficient Modal Component In React Using Hooks And Portals"
+              title="Top Front-End Tools Of 2023"
               img={article3}
-              date="March 22, 2024"
-              link="/"
+              date="January 26, 2024"
+              link="https://www.smashingmagazine.com/2024/01/top-frontend-tools-2023/"
             />
 
             <Article
-              title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
+              title="A Pocket Guide to Typography"
               img={article4}
-              date="May 22, 2024"
-              link="/"
+              date="January 27, 2024"
+              link="http://www.typogui.de/"
             />
 
             <Article
-              title="Silky Smooth Scrolling In Reactjs: A Step-By-Step Guide For React Developers"
+              title="5 CSS snippets every front-end developer should know in 2024"
               img={article5}
-              date="March 22, 2024"
-              link="/"
+              date="January 27, 2024"
+              link="https://web.dev/articles/5-css-snippets-every-front-end-developer-should-know-in-2024"
             />
 
             <Article
-              title="Build A Fabulous Todo List App With React, Redux And Framer-Motion"
+              title="A Beginner’s Guide to Website Speed Optimization"
               img={article6}
-              date="March 22, 2024"
-              link="/"
+              date="January 28, 2024"
+              link="https://kinsta.com/learn/page-speed/"
             />
 
             <Article
-              title="What Is Higher Order Component (Hoc) In React?"
+              title="JavaScript Reference by MDN"
               img={article7}
-              date="March 22, 2024"
-              link="/"
+              date="January 28, 2024"
+              link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"
             />
 
             <Article
-              title="Redux Simplified: A Beginner's Guide For Web Developers"
+              title="DOM Manipulation Reference
+              "
               img={article8}
-              date="March 22, 2024"
-              link="/"
+              date="January 28, 2024"
+              link="https://youmightnotneedjquery.com/"
             />
           </ul>
         </Layout>
