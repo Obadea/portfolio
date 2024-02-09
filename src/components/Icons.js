@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 export const TwitterIcon = ({ className, ...rest }) => (
   <svg
@@ -101,8 +101,9 @@ export const DribbbleIcon = ({ className, ...rest }) => (
 export const SunIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    width="1em"
+    // height="24"
+    height="1em"
     viewBox="0 0 24 24"
     {...rest}
     className={`w-full h-auto ${className}`}
@@ -279,8 +280,8 @@ export const SunIcon = ({ className, ...rest }) => (
 export const MoonIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    width="1em"
+    height="1em"
     viewBox="0 0 24 24"
     {...rest}
     className={`w-full h-auto ${className}`}
@@ -432,12 +433,11 @@ export const MoonIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-
 export const LinkArrow = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
+    width="1.4em"
+    height="1.4em"
     viewBox="0 0 24 24"
     className={`w-full h-auto ${className}`}
     {...rest}
@@ -462,11 +462,11 @@ export const CircularText = ({ className, ...rest }) => (
     viewBox="0 0 496 496"
     className={`w-full h-auto ${className}`}
     style={{
-      shapeRendering: "geometricPrecision",
-      textRendering: "geometricPrecision",
-      imageRendering: "optimizeQuality",
-      fillRule: "evenodd",
-      clipRule: "evenodd",
+      shapeRendering: 'geometricPrecision',
+      textRendering: 'geometricPrecision',
+      imageRendering: 'optimizeQuality',
+      fillRule: 'evenodd',
+      clipRule: 'evenodd',
     }}
     {...rest}
   >
