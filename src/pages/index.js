@@ -59,7 +59,7 @@ export default function Home() {
                   "
                   download={true}
                 >
-                  Resume <LinkArrow className="w-6 ml-1" />
+                  Resume <LinkArrow className="max-w-6 h-6 ml-1" />
                 </Link>
                 <Link
                   href="tel:+2348088127274"

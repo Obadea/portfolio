@@ -80,7 +80,7 @@ export const items = [
   {
     title: 'Mapty',
     category: 'JavaScript',
-    link: 'https://mapty-2jd.pages.dev/',
+    link: 'https://obadea.github.io/Mapty/',
     github: 'https://github.com/Obadea/Mapty',
     type: 'API Integration',
     img: project10,

@@ -27,7 +27,7 @@ import {
 //
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="w-full flex items-center rounded-br-2xl justify-between rounded-3xl bg-light shadow-2xl p-12 dark:bg-dark dark:shadow-3xl lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4 cursor-grab">
+    <article className="w-full flex items-center rounded-br-2xl justify-between rounded-3xl bg-light shadow-2xl p-12 dark:bg-dark dark:shadow-3xl lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4 cursor-grab h-[36rem]">
       <Link
         href={link}
         target="_blank"
@@ -113,10 +113,10 @@ export default function App() {
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
         autoplay={true}
-        className="mySwiper swiper"
+        className="mySwiper swiper "
       >
         {/* Featured Project 1 */}
-        <SwiperSlide className="swiper-slide">
+        <SwiperSlide className="swiper-slide ">
           <FeaturedProject
             title="Car ShowCase Application"
             summary="The Car Search Web App (CarHub) is a dynamic and user-friendly application that simplifies the process of finding detailed information about cars, including their model, year of manufacture, fuel type, and daily rental prices. This app caters to users who are looking for specific details about cars for potential rental."

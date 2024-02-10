@@ -160,9 +160,9 @@ const NavBar = () => {
           `}
           >
             {mode === 'dark' ? (
-              <SunIcon className={'w-24 h-24 fill-dark'} />
+              <SunIcon className={'max-w-24 max-h-24 fill-dark'} />
             ) : (
-              <MoonIcon className={'fill-dark'} />
+              <MoonIcon className={'max-w-24 max-h-24 fill-dark'} />
             )}
           </button>
         </nav>
@@ -170,75 +170,79 @@ const NavBar = () => {
 
       {isOpen ? (
         <motion.div
-          initial={{ scale: 0, opacity: 0, x: '-50% ', y: '-50%' }}
-          animate={{ scale: 1, opacity: 1 }}
-          className="min-w-[70vw] max-h-[80%] h-[60%] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 z-50 -translate-y-1/2 bg-dark/90 dark:bg-light/60 rounded-lg  py-32  backdrop-blur-md "
+          className=" transition-all[0.5s] backdrop-blur-sm w-[100vw] h-[100%] fixed top-1/2 left-1/2 -translate-x-1/2 z-50 -translate-y-1/2  rounded-lg "
+          onClick={handleClick}
         >
-          <nav className="flex items-center justify-center flex-col">
-            <CustomMobileLink
-              href="/"
-              title="Home"
-              className=""
-              toggle={handleClick}
-            />
-            <CustomMobileLink
-              href="/about"
-              title="About"
-              className=""
-              toggle={handleClick}
-            />
-            <CustomMobileLink
-              href="/projects"
-              title="Projects"
-              className=""
-              toggle={handleClick}
-            />
-            <CustomMobileLink
-              href="/articles"
-              title="Articles"
-              className=""
-              toggle={handleClick}
-            />
-          </nav>
-          <nav className="flex items-center justify-center flex-wrap mt-2">
-            <motion.a
-              href="https://twitter.com/obadea0"
-              target="_blank"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 sm:mx-1 fill-light dark:fill-dark"
-            >
-              <TwitterIcon />
-            </motion.a>
-            <motion.a
-              href="https://github.com/obadea"
-              target="_blank"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 sm:mx-1 bg-light rounded-full dark:bg-dark"
-            >
-              <GithubIcon />
-            </motion.a>
-            <motion.a
-              href="https://www.linkedin.com/in/obadea/"
-              target="_blank"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 sm:mx-1"
-            >
-              <LinkedInIcon />
-            </motion.a>
-            <motion.a
-              href="https://pin.it/f3FJ8uQtC"
-              target="_blank"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 sm:mx-1 bg-light rounded-full"
-            >
-              <PinterestIcon />
-            </motion.a>
-            {/* Dribble Coming soon */}
-            {/* <motion.a
+          <motion.div
+            initial={{ scale: 0, opacity: 0, x: '-50% ', y: '-50%' }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="min-w-[70vw] max-h-[80%] h-[60%] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 z-50 -translate-y-1/2 bg-dark/90 dark:bg-light/60 rounded-lg  py-32  backdrop-blur-md "
+          >
+            <nav className="flex items-center justify-center flex-col">
+              <CustomMobileLink
+                href="/"
+                title="Home"
+                className=""
+                toggle={handleClick}
+              />
+              <CustomMobileLink
+                href="/about"
+                title="About"
+                className=""
+                toggle={handleClick}
+              />
+              <CustomMobileLink
+                href="/projects"
+                title="Projects"
+                className=""
+                toggle={handleClick}
+              />
+              <CustomMobileLink
+                href="/articles"
+                title="Articles"
+                className=""
+                toggle={handleClick}
+              />
+            </nav>
+            <nav className="flex items-center justify-center flex-wrap mt-2">
+              <motion.a
+                href="https://twitter.com/obadea0"
+                target="_blank"
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.9 }}
+                className="w-6 mx-3 sm:mx-1 fill-light dark:fill-dark"
+              >
+                <TwitterIcon />
+              </motion.a>
+              <motion.a
+                href="https://github.com/obadea"
+                target="_blank"
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.9 }}
+                className="w-6 mx-3 sm:mx-1 bg-light rounded-full dark:bg-dark"
+              >
+                <GithubIcon />
+              </motion.a>
+              <motion.a
+                href="https://www.linkedin.com/in/obadea/"
+                target="_blank"
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.9 }}
+                className="w-6 mx-3 sm:mx-1"
+              >
+                <LinkedInIcon />
+              </motion.a>
+              <motion.a
+                href="https://pin.it/f3FJ8uQtC"
+                target="_blank"
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.9 }}
+                className="w-6 mx-3 sm:mx-1 bg-light rounded-full"
+              >
+                <PinterestIcon />
+              </motion.a>
+              {/* Dribble Coming soon */}
+              {/* <motion.a
               href="/"
               target="_blank"
               whileHover={{ y: -2 }}
@@ -248,19 +252,20 @@ const NavBar = () => {
               <DribbbleIcon />
             </motion.a> */}
 
-            <button
-              onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
-              className={`sm:mx-1 ml-3 flex items-center justify-center rounded-full p-1
+              <button
+                onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
+                className={`sm:mx-1 ml-3 flex items-center justify-center rounded-full p-1
     ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}
     `}
-            >
-              {mode === 'dark' ? (
-                <SunIcon className={' w-24 h-24 fill-dark'} />
-              ) : (
-                <MoonIcon className={'fill-dark'} />
-              )}
-            </button>
-          </nav>
+              >
+                {mode === 'dark' ? (
+                  <SunIcon className={' w-24 h-24 fill-dark'} />
+                ) : (
+                  <MoonIcon className={'fill-dark'} />
+                )}
+              </button>
+            </nav>
+          </motion.div>
         </motion.div>
       ) : null}
 
