@@ -8,6 +8,8 @@ import project4 from '../../public/images/projects/gpt-3.jpeg';
 import project8 from '../../public/images/projects/metaVerse.jpeg';
 import project6 from '../../public/images/projects/portfolio.jpeg';
 import project5 from '../../public/images/projects/promptopia.jpeg';
+import project7 from '../../public/images/projects/forkify.jpeg';
+import project11 from '../../public/images/projects/aiSummarizer.jpeg';
 
 import { motion } from 'framer-motion';
 const FramerImage = motion(Image);
@@ -27,7 +29,7 @@ import {
 //
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="w-full flex items-center rounded-br-2xl justify-between rounded-3xl bg-light shadow-2xl p-12 dark:bg-dark dark:shadow-3xl lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4 cursor-grab h-[36rem]">
+    <article className="w-full flex items-center rounded-br-2xl justify-between rounded-3xl bg-light shadow-2xl p-12 dark:bg-dark dark:shadow-3xl lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4 cursor-grab sm:min-h-[38rem] lg:min-h-[50rem]">
       <Link
         href={link}
         target="_blank"
@@ -142,12 +144,12 @@ export default function App() {
         {/* Featured Project 3 */}
         <SwiperSlide className="swiper-slide">
           <FeaturedProject
-            title="MetaVerse"
-            summary="The metaverse refers to a collective virtual shared space that is created by the convergence of physical and virtual reality. It is a space where users can interact with each other, digital objects, and the environment in real-time. The metaverse goes beyond traditional virtual reality and incorporates elements of augmented reality, social networking, and immersive experiences."
-            link="https://meta-verse-obadea.vercel.app/"
-            img={project8}
+            title="Forkify"
+            summary="Forkify is a web application designed to assist users in finding, storing, and cooking recipes. Developed with modern web technologies, Forkify offers a user-friendly interface where users can search for recipes by entering keywords or ingredients. Upon finding a recipe of interest, users can view its details, including ingredients, cooking instructions, and nutritional information."
+            link="https://forkify-test.pages.dev/"
+            img={project7}
             type="Featured Project"
-            github="https://github.com/Obadea/metaVerse"
+            github="https://github.com/Obadea/Forkify"
           />
         </SwiperSlide>
 
@@ -172,6 +174,18 @@ export default function App() {
             img={project5}
             type="Featured Project"
             github="https://github.com/Obadea/promptopia"
+          />
+        </SwiperSlide>
+
+        {/* Featured Project 6 */}
+        <SwiperSlide className="swiper-slide">
+          <FeaturedProject
+            title="Ai Summarizer"
+            summary="An intelligent AI app to summarize website articles involves using advanced natural language processing techniques. This AI analyzes the content from the provided link, extracting key information and employing sophisticated summarization methods. Whether through rephrasing or selecting essential sentences, the AI distills the article into a short and clear summary."
+            link="https://obadea-ai-summarizer.pages.dev/"
+            img={project11}
+            type="Featured Project"
+            github="https://github.com/Obadea/Ai-summarizer"
           />
         </SwiperSlide>
       </Swiper>
