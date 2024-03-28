@@ -10,6 +10,7 @@ import project6 from '../../public/images/projects/portfolio.jpeg';
 import project5 from '../../public/images/projects/promptopia.jpeg';
 import project7 from '../../public/images/projects/forkify.jpeg';
 import project11 from '../../public/images/projects/aiSummarizer.jpeg';
+import project13 from '../../public/images/projects/obadeaTrackPreview.png';
 
 import { motion } from 'framer-motion';
 const FramerImage = motion(Image);
@@ -186,6 +187,18 @@ export default function App() {
             img={project11}
             type="Featured Project"
             github="https://github.com/Obadea/Ai-summarizer"
+          />
+        </SwiperSlide>
+
+        {/* Featured Project 7 */}
+        <SwiperSlide className="swiper-slide">
+          <FeaturedProject
+            title="Obadea Track"
+            summary="A Full Stack MERN Dashboard App With CRUD, Auth, and Charts Using Refine - Client Application, With modern material design, a fully functional dashboard, a property management page, and a users page - both connected to our database and a profile page that connects the two!"
+            link="https://obadeatrack.pages.dev/"
+            img={project13}
+            type="Featured Project"
+            github="https://github.com/Obadea/obadeaTrack"
           />
         </SwiperSlide>
       </Swiper>

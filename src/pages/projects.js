@@ -121,7 +121,15 @@ const Projects = () => {
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [filteredItems, setFilteredItems] = useState(items);
 
-  let filters = ['Latest', 'UI/UX Focus', 'React', 'JavaScript', 'Nextjs'];
+  let filters = [
+    'Latest',
+    'UI/UX Focus',
+    'React',
+    'JavaScript',
+    'Nextjs',
+    'TypeScript',
+    'Upcoming',
+  ];
 
   const handleFilterButtonClick = (selectedCategory) => {
     if (selectedFilters.includes(selectedCategory)) {

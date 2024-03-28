@@ -10,6 +10,8 @@ import project9 from '../../public/images/projects/bankist website.jpeg';
 import project10 from '../../public/images/projects/mapty.jpeg';
 import project11 from '../../public/images/projects/aiSummarizer.jpeg';
 import project12 from '../../public/images/projects/movieland.jpeg';
+import project13 from '../../public/images/projects/obadeaTrackPreview.png';
+import project14 from '../../public/images/projects/obadinn.jpeg';
 
 export const items = [
   {
@@ -92,5 +94,21 @@ export const items = [
     github: 'https://github.com/Obadea/Ai-summarizer',
     type: 'API Integration',
     img: project11,
+  },
+  {
+    title: 'Obadea Track',
+    category: 'TypeScript',
+    link: 'https://obadeatrack.pages.dev/',
+    github: 'https://github.com/Obadea/obadeaTrack',
+    type: 'Refined(CRUD)',
+    img: project13,
+  },
+  {
+    title: 'Obadinn',
+    category: 'Upcoming',
+    link: '/',
+    github: 'https://github.com/Obadea/obadinn',
+    type: 'Upcoming',
+    img: project14,
   },
 ];
