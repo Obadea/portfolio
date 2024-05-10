@@ -12,6 +12,7 @@ import project11 from '../../public/images/projects/aiSummarizer.jpeg';
 import project12 from '../../public/images/projects/movieland.jpeg';
 import project13 from '../../public/images/projects/obadeaTrackPreview.png';
 import project14 from '../../public/images/projects/obadinn.jpeg';
+import project15 from '../../public/images/projects/elegant-collection.jpeg';
 
 export const items = [
   {
@@ -104,11 +105,11 @@ export const items = [
     img: project13,
   },
   {
-    title: 'Obadinn',
-    category: 'Upcoming',
-    link: '/',
-    github: 'https://github.com/Obadea/obadinn',
-    type: 'Upcoming',
-    img: project14,
+    title: 'Elegant Collection',
+    category: 'Full Stack',
+    link: 'https://elegant-collection-ecommerce.pages.dev',
+    github: '/projects',
+    type: 'E-Commerce',
+    img: project15,
   },
 ];

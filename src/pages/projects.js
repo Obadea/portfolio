@@ -128,7 +128,7 @@ const Projects = () => {
     'JavaScript',
     'Nextjs',
     'TypeScript',
-    'Upcoming',
+    'Full Stack',
   ];
 
   const handleFilterButtonClick = (selectedCategory) => {

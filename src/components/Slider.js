@@ -11,6 +11,7 @@ import project5 from '../../public/images/projects/promptopia.jpeg';
 import project7 from '../../public/images/projects/forkify.jpeg';
 import project11 from '../../public/images/projects/aiSummarizer.jpeg';
 import project13 from '../../public/images/projects/obadeaTrackPreview.png';
+import project15 from '../../public/images/projects/elegant-collection.jpeg';
 
 import { motion } from 'framer-motion';
 const FramerImage = motion(Image);
@@ -127,6 +128,18 @@ export default function App() {
             img={project1}
             type="Featured Project"
             github="https://github.com/Obadea/obadea_cars_showcase"
+          />
+        </SwiperSlide>
+
+        {/* Featured Project 1.5 */}
+        <SwiperSlide className="swiper-slide">
+          <FeaturedProject
+            title="Elegant Collections"
+            summary="Elegant Collections, an oasis of refined tastes in the digital realm, is more than just an e-commerce site—it's a destination where sophistication meets convenience. As you step into Elegant Collections' virtual storefront, you're greeted with a harmonious blend of sleek design and intuitive navigation."
+            link="https://elegant-collection-ecommerce.pages.dev"
+            img={project15}
+            type="E-Commerce"
+            github="/projects"
           />
         </SwiperSlide>
 

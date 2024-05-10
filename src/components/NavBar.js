@@ -170,13 +170,13 @@ const NavBar = () => {
 
       {isOpen ? (
         <motion.div
-          className=" transition-all[0.5s] backdrop-blur-sm w-[100vw] h-[100%] fixed top-1/2 left-1/2 -translate-x-1/2 z-50 -translate-y-1/2  rounded-lg "
+          className=" transition-all[0.5s]  w-[100vw] h-[100%] fixed top-1/2 left-1/2 -translate-x-1/2 z-50 -translate-y-1/2  bg-dark/50 "
           onClick={handleClick}
         >
           <motion.div
             initial={{ scale: 0, opacity: 0, x: '-50% ', y: '-50%' }}
             animate={{ scale: 1, opacity: 1 }}
-            className="min-w-[70vw] max-h-[80%] h-[60%] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 z-50 -translate-y-1/2 bg-dark/90 dark:bg-light/60 rounded-lg  py-32  backdrop-blur-md "
+            className=" min-w-[70vw] max-h-[70%] h-[60%] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 z-50 -translate-y-1/2 bg-dark/40 dark:bg-light/10 dark:backdrop-blur rounded-lg  py-32  backdrop-blur-md "
           >
             <nav className="flex items-center justify-center flex-col">
               <CustomMobileLink
