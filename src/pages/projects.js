@@ -71,7 +71,7 @@ const FramerImage = motion(Image);
 
 const Project = ({ title, type, img, link, github }) => {
   return (
-    <article className="w-full display flex flex-col items-center justify-center rounded-2xl shadow-2xl bg-light p-6 dark:bg-dark dark:border-light col-span-6 xs:p-4 sm:col-span-12 ">
+    <article className="w-full display flex flex-col items-center justify-center rounded-2xl shadow-2xl   bg-light p-6 dark:bg-dark dark:border-light col-span-6 xs:p-4 sm:col-span-12 ">
       <Link
         href={link}
         target="_blank"
@@ -171,7 +171,7 @@ const Projects = () => {
             className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
 
-          <div className=" flex justify-end mb-10 mt-4 sm:justify-center sm:text-[0.8rem] xs:grid xs:grid-cols-3 xs:text-[0.5rem]">
+          <div className=" flex justify-end mb-10 mt-4 sm:justify-center text-[0.9rem] uxs:grid uxs:grid-cols-3 uxs:text-[0.5rem]">
             {filters.map((category, idx) => (
               <button
                 onClick={() => handleFilterButtonClick(category)}

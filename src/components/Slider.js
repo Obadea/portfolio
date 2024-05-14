@@ -12,6 +12,7 @@ import project7 from '../../public/images/projects/forkify.jpeg';
 import project11 from '../../public/images/projects/aiSummarizer.jpeg';
 import project13 from '../../public/images/projects/obadeaTrackPreview.png';
 import project15 from '../../public/images/projects/elegant-collection.jpeg';
+import project17 from '../../public/images/projects/iphone.jpeg';
 
 import { motion } from 'framer-motion';
 const FramerImage = motion(Image);
@@ -117,6 +118,7 @@ export default function App() {
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
         autoplay={true}
+        loop={true}
         className="mySwiper swiper "
       >
         {/* Featured Project 1 */}
@@ -134,12 +136,24 @@ export default function App() {
         {/* Featured Project 1.5 */}
         <SwiperSlide className="swiper-slide">
           <FeaturedProject
-            title="Elegant Collections"
+            title="Elegant Collection"
             summary="Elegant Collections, an oasis of refined tastes in the digital realm, is more than just an e-commerce site—it's a destination where sophistication meets convenience. As you step into Elegant Collections' virtual storefront, you're greeted with a harmonious blend of sleek design and intuitive navigation."
             link="https://elegant-collection-ecommerce.pages.dev"
             img={project15}
             type="E-Commerce"
             github="/projects"
+          />
+        </SwiperSlide>
+
+        {/* Featured Project 2 */}
+        <SwiperSlide className="swiper-slide">
+          <FeaturedProject
+            title="3D Iphone Website"
+            summary="The 3D iPhone website offers an immersive, interactive showcase of the latest iPhone models, allowing you to explore every detail in stunning 3D. Rotate and inspect the iPhone from all angles To ensure a seamless and high-quality user experience, i utilize Sentry for real-time performance monitoring and error tracking."
+            link="https://3d-iphone-website.pages.dev/"
+            img={project17}
+            type="GSAP Animation, Three.js and Interactivity | Performance Optimization"
+            github="https://github.com/Obadea/3d-Iphone-website"
           />
         </SwiperSlide>
 

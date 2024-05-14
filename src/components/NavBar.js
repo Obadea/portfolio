@@ -47,14 +47,14 @@ const CustomMobileLink = ({ href, title, className = '', toggle }) => {
   return (
     <button
       href={href}
-      className={`${className} relative group text-light dark:text-dark my-2`}
+      className={`${className} relative group text-light my-2`}
       onClick={handleClick}
     >
       {title}
 
       <span
-        className={`h-[2px] inline-block bg-light absolute left-0 -bottom-0.5 
-        group-hover:w-full transition-[width] ease duration-300 dark:bg-dark ${
+        className={`h-[2px] inline-block bg-dark absolute left-0 -bottom-0.5 
+        group-hover:w-full transition-[width] ease duration-300 dark:bg-light ${
           router.asPath === href ? 'w-full' : 'w-0'
         }`}
       >
@@ -74,7 +74,7 @@ const NavBar = () => {
   };
 
   return (
-    <header className="w-full mb-4 px-32 py-8 font-medium  items-center justify-between dark:text-lightm flex  relative z-20 lg:px-16 md:px-12 sm:px-8  lg:flex-row-reverse dark:text-light text-dark">
+    <header className="w-full mb-4 px-32 py-8 font-medium  items-center justify-between dark:text-lightm flex  relative z-20 lg:px-16 md:px-12 sm:px-8  lg:flex-row-reverse dark:text-light text-dark ">
       <button
         className=" flex-col justify-center items-center p-1.5 hidden lg:flex "
         onClick={handleClick}
@@ -160,9 +160,9 @@ const NavBar = () => {
           `}
           >
             {mode === 'dark' ? (
-              <SunIcon className={'max-w-24 max-h-24 fill-dark'} />
+              <SunIcon className={'max-w-15 max-h-15 fill-dark'} />
             ) : (
-              <MoonIcon className={'max-w-24 max-h-24 fill-dark'} />
+              <MoonIcon className={'max-w-15 max-h-15 fill-dark'} />
             )}
           </button>
         </nav>
@@ -176,9 +176,9 @@ const NavBar = () => {
           <motion.div
             initial={{ scale: 0, opacity: 0, x: '-50% ', y: '-50%' }}
             animate={{ scale: 1, opacity: 1 }}
-            className=" min-w-[70vw] max-h-[70%] h-[60%] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 z-50 -translate-y-1/2 bg-dark/40 dark:bg-light/10 dark:backdrop-blur rounded-lg  py-32  backdrop-blur-md "
+            className=" min-w-[70vw] max-h-[70%] gap-8 flex flex-col  items-center fixed top-1/2 left-1/2 -translate-x-1/2 z-50 -translate-y-1/2 bg-dark/40 dark:bg-light/10 dark:backdrop-blur rounded-lg p-6  backdrop-blur-md "
           >
-            <nav className="flex items-center justify-center flex-col">
+            <nav className="flex items-center justify-center flex-col ">
               <CustomMobileLink
                 href="/"
                 title="Home"

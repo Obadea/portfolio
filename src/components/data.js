@@ -13,6 +13,8 @@ import project12 from '../../public/images/projects/movieland.jpeg';
 import project13 from '../../public/images/projects/obadeaTrackPreview.png';
 import project14 from '../../public/images/projects/obadinn.jpeg';
 import project15 from '../../public/images/projects/elegant-collection.jpeg';
+import project16 from '../../public/images/projects/nike.jpeg';
+import project17 from '../../public/images/projects/iphone.jpeg';
 
 export const items = [
   {
@@ -111,5 +113,21 @@ export const items = [
     github: '/projects',
     type: 'E-Commerce',
     img: project15,
+  },
+  {
+    title: '3D Iphone Website',
+    category: 'React',
+    link: 'https://3d-iphone-website.pages.dev/',
+    github: 'https://github.com/Obadea/3d-Iphone-website',
+    type: 'GSAP Animation, Three.js and Interactivity | Performance Optimization',
+    img: project17,
+  },
+  {
+    title: 'Nike',
+    category: 'React',
+    link: 'https://nike-b4d.pages.dev/',
+    github: 'https://github.com/Obadea/Nike',
+    type: 'Responsive Design | Tailwind css',
+    img: project16,
   },
 ];

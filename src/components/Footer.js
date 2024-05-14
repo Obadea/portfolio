@@ -8,12 +8,7 @@ const Footer = () => {
       <Layout className="py-8 flex items-center justify-between lg:flex-col-reverse lg:py-6 ">
         <span>{new Date().getFullYear()} &copy; All Right Reserved.</span>
         <div className="flex items-center lg:py-2">
-          Built With{' '}
-          <span className="text-primary dark:text-primaryDark text-3xl px-1">
-            {' '}
-            &#9825;
-          </span>{' '}
-          by&nbsp;
+          Built by&nbsp;
           <Link
             href="https://twitter.com/obadea0"
             className="underline underline-offset-2"
@@ -22,6 +17,10 @@ const Footer = () => {
             {' '}
             Obadea
           </Link>
+          <span className="text-primary dark:text-primaryDark text-3xl px-1">
+            {' '}
+            &#9825;
+          </span>{' '}
         </div>
         <Link
           href="mailto:obadeagbenga@gmail.com"
