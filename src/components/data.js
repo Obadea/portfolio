@@ -15,6 +15,7 @@ import project14 from '../../public/images/projects/obadinn.jpeg';
 import project15 from '../../public/images/projects/elegant-collection.jpeg';
 import project16 from '../../public/images/projects/nike.jpeg';
 import project17 from '../../public/images/projects/iphone.jpeg';
+import project18 from '../../public/images/projects/alphaProject.jpeg';
 
 export const items = [
   {
@@ -34,6 +35,14 @@ export const items = [
     img: project4,
   },
   {
+    title: 'Alpha Dashboard',
+    category: 'React Latest',
+    link: 'https://alphatwelve-project.vercel.app/',
+    github: 'https://github.com/Obadea/Alphatwelve_ProjectNike',
+    type: 'Responsive Design | Tailwind css',
+    img: project18,
+  },
+  {
     title: 'Forkify',
     category: 'JavaScript',
     link: 'https://forkify-test.pages.dev/',
@@ -47,6 +56,7 @@ export const items = [
     link: 'https://bankist-webpage.pages.dev',
     github: 'https://github.com/Obadea/bankist-webpage',
     type: 'Responsive Design | Interactivity',
+    category: 'Nextjs',
     img: project9,
   },
   {
@@ -76,7 +86,6 @@ export const items = [
   },
   {
     title: "Obadiah's Portfolio",
-    category: 'Nextjs',
     link: '/',
     github: 'https://github.com/Obadea/portfolio',
     type: 'Animation and Interactivity | Performance Optimization',

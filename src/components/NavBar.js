@@ -152,12 +152,13 @@ const NavBar = () => {
           >
             <DribbbleIcon />
           </motion.a> */}
-
           <button
             onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
-            className={`ml-3 flex items-center justify-center rounded-full p-1
-          ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}
-          `}
+            className={` ml-3 flex items-center justify-center rounded-full p-1
+                ${
+                  mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'
+                }
+                `}
           >
             {mode === 'dark' ? (
               <SunIcon className={'max-w-15 max-h-15 fill-dark'} />
@@ -176,7 +177,7 @@ const NavBar = () => {
           <motion.div
             initial={{ scale: 0, opacity: 0, x: '-50% ', y: '-50%' }}
             animate={{ scale: 1, opacity: 1 }}
-            className=" min-w-[70vw] max-h-[70%] gap-8 flex flex-col  items-center fixed top-1/2 left-1/2 -translate-x-1/2 z-50 -translate-y-1/2 bg-dark/40 dark:bg-light/10 dark:backdrop-blur rounded-lg p-6  backdrop-blur-md "
+            className="min-w-[70vw] max-h-[74%] gap-6 flex flex-col  items-center fixed top-1/2 left-1/2 -translate-x-1/2 z-50 -translate-y-1/2 bg-dark/40 dark:bg-light/10 dark:backdrop-blur rounded-lg p-4  backdrop-blur-md "
           >
             <nav className="flex items-center justify-center flex-col ">
               <CustomMobileLink

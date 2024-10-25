@@ -30,25 +30,27 @@ const ScrollToTopButton = () => {
   };
 
   return (
-    <svg
-      onClick={scrollToTop}
-      className={`${isVisible ? 'block' : 'hidden'}  cursor-pointer`}
-      class="with-icon_icon__MHUeb"
-      data-testid="geist-icon"
-      fill="none"
-      height="46"
-      shape-rendering="geometricPrecision"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="1.5"
-      viewBox="0 0 24 24"
-      width="46"
-    >
-      <circle cx="12" cy="12" r="10" />
-      <path d="M16 12l-4-4-4 4" />
-      <path d="M12 16V8" />
-    </svg>
+    <a>
+      <svg
+        onClick={scrollToTop}
+        className={`${isVisible ? 'block' : 'hidden'} `}
+        class="with-icon_icon__MHUeb"
+        data-testid="geist-icon"
+        fill="none"
+        height="46"
+        shape-rendering="geometricPrecision"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+        width="46"
+      >
+        <circle cx="12" cy="12" r="10" />
+        <path d="M16 12l-4-4-4 4" />
+        <path d="M12 16V8" />
+      </svg>
+    </a>
   );
 };
 
